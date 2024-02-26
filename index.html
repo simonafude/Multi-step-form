@@ -5,116 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- imports font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
   </style>
 </head>
 <body>
 
   <!-- Sidebar start -->
+  <nav>
+    <button>Step 1
+      Your info</button>
 
-  Step 1
-  Your info
+    <button>Step 2
+      Select plan</button>
 
-  Step 2
-  Select plan
+    <button>Step 3
+      Add-ons</button>
 
-  Step 3
-  Add-ons
-
-  Step 4
-  Summary
+    <button>Step 4
+      Summary</button>
+  </nav>
+  
 
   <!-- Sidebar end -->
 
   <!-- Step 1 start -->
+  <form action="Submit" method="post">
+    <h1>Personal info</h1>
+    <p>Please provide your name, email address, and phone number.</p>
+  
+    <label for="">Name<input type="text" name="" id="" placeholder="e.g. Stephen King"></label>
+    
+  
+    <label for="">Email Address<input type="email" name="" id="" placeholder="e.g. stephenking@lorem.com">
+    </label>
+    
+      
+    <label for="">Phone Number<input type="tel" name="" id="" placeholder="e.g. +1 234 567 890"></label>
+    
+  </form>
 
-  Personal info
-  Please provide your name, email address, and phone number.
-
-  Name
-  e.g. Stephen King
-
-  Email Address
-  e.g. stephenking@lorem.com
-
-  Phone Number
-  e.g. +1 234 567 890
-
-  Next Step
-
+  <button>Next Step</button>
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
 
-  Select your plan
-  You have the option of monthly or yearly billing.
+  <form action="" method="post">
+    <h1>Select your plan</h1>
+    <p>You have the option of monthly or yearly billing.</p>
 
-  Arcade
-  $9/mo
+    <label for="">Arcade
+      $9/mo</label>
+    <input type="radio" name="" id="">
 
-  Advanced
-  $12/mo
+    <label for="">Advanced
+      $12/mo</label>
+      <input type="radio" name="" id="">
 
-  Pro
-  $15/mo
+    <label for="">Pro
+      $15/mo</label>
+      <input type="radio" name="" id="">
 
-  Monthly
-  Yearly
+    Monthly
+    Yearly
 
-  Go Back
-  Next Step
+  </form>
+
+  <button>Go Back</button>
+  <button type="submit">Next Step</button>
 
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
 
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
+  <form action="Submit" method="post">
+    <h1>Pick add-ons</h1>
+    <p>Add-ons help enhance your gaming experience.
+    </p>
 
-  Online service
-  Access to multiplayer games
-  +$1/mo
+    <label for="">Online service
+      Access to multiplayer games
+      +$1/mo</label>
+    <input type="checkbox" name="" id="">
+    
+    <label for="">Larger storage
+      Extra 1TB of cloud save
+      +$2/mo</label>
+    <input type="checkbox" name="" id="">
 
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
+    <label for="">Customizable Profile
+      Custom theme on your profile
+      +$2/mo</label>
+      <input type="checkbox" name="" id="">
 
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
-
-  Go Back
-  Next Step
+    <button>Go Back</button>
+    <button>Next Step</button>
+  </form>
 
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
 
-  Finishing up
+  <form action="" method="post">
+    Finishing up
   Double-check everything looks OK before confirming.
 
   <!-- Dynamically add subscription and add-on selections here -->
 
   Total (per month/year)
 
-  Go Back
-  Confirm
+  </form>
+
+ <button> Go Back</button>
+ <button>Confirm</button>
 
   <!-- Step 4 end -->
 
   <!-- Step 5 start -->
 
-  Thank you!
+  <form action="">
+    <i class="fa-solid fa-check"></i>
+    <h1>Thank you!</h1>
 
   Thanks for confirming your subscription! We hope you have fun 
   using our platform. If you ever need support, please feel free 
   to email us at support@loremgaming.com.
+  </form>
 
   <!-- Step 5 end -->
   

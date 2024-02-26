@@ -1,0 +1,35 @@
+/* Color Variables Declaration */
+
+:root {
+  /* Primary */
+  --mar-b-clr: hsl(213, 96%, 18%);
+  --purp-b-clr: hsl(243, 100%, 62%);
+  --past-b-clr: hsl(228, 100%, 84%);
+  --light-b-clr: hsl(206, 94%, 87%);
+  --straw-red-clr: hsl(354, 84%, 57%);
+
+  /* Neutral */
+  --cool-g-clr: hsl(231, 11%, 63%);
+  --light-g-color: hsl(229, 24%, 87%);
+  --magno-clr: hsl(217, 100%, 97%);
+  --alabas-clr: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+
+}
+
+body {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+
+
+
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
