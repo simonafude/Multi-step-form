@@ -1,151 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- imports font family -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+    <!-- imports font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  </style>
-</head>
-<body>
+    <!-- Fontawesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/56322c05e6.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Sidebar start -->
-  <nav>
-    <button>Step 1
-      Your info</button>
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <!-- Point to Javascript file -->
+    <script src="myscripts.js"></script>
 
-    <button>Step 2
-      Select plan</button>
+    <!-- Sidebar start -->
+    <nav class="sidebar">
+      <button aria-controls="personal-info">
+        <span class="hidden">Step </span>1<span class="hidden"> Your info</span>
+      </button>
 
-    <button>Step 3
-      Add-ons</button>
+      <button aria-controls="plan">
+        <span class="hidden">Step </span>2<span class="hidden">
+          Select plan</span
+        >
+      </button>
 
-    <button>Step 4
-      Summary</button>
-  </nav>
-  
+      <button aria-controls="add-ons">
+        <span class="hidden">Step </span>3<span class="hidden">Add-ons</span>
+      </button>
 
-  <!-- Sidebar end -->
+      <button aria-controls="summary">
+        <span class="hidden">Step </span>4<span class="hidden">Summary</span>
+      </button>
+    </nav>
+    <!-- Sidebar end -->
 
-  <!-- Step 1 start -->
-  <form action="Submit" method="post">
-    <h1>Personal info</h1>
-    <p>Please provide your name, email address, and phone number.</p>
-  
-    <label for="">Name<input type="text" name="" id="" placeholder="e.g. Stephen King"></label>
-    
-  
-    <label for="">Email Address<input type="email" name="" id="" placeholder="e.g. stephenking@lorem.com">
-    </label>
-    
-      
-    <label for="">Phone Number<input type="tel" name="" id="" placeholder="e.g. +1 234 567 890"></label>
-    
-  </form>
+    <!-- Step 1 start -->
+    <section>
+      <form
+        action="Submit"
+        method="post"
+        class="info-form, hidden"
+        id="personal-info"
+      >
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
 
-  <button>Next Step</button>
-  <!-- Step 1 end -->
+        <label for="name"
+          >Name<input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="e.g. Stephen King"
+        /></label>
 
-  <!-- Step 2 start -->
+        <label for="email"
+          >Email Address<input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="e.g. stephenking@lorem.com"
+          />
+        </label>
 
-  <form action="" method="post">
-    <h1>Select your plan</h1>
-    <p>You have the option of monthly or yearly billing.</p>
+        <label for="tel">
+          Phone Number
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="e.g. +1 234 567 890"
+        /></label>
+        <button id="next-1">Next Step</button>
+      </form>
+    </section>
 
-    <label for="">Arcade
-      $9/mo</label>
-    <input type="radio" name="" id="">
+    <!-- Step 1 end -->
 
-    <label for="">Advanced
-      $12/mo</label>
-      <input type="radio" name="" id="">
+    <!-- Step 2 start -->
+    <section>
+      <form action="" method="post" class="info-form" id="plan">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
 
-    <label for="">Pro
-      $15/mo</label>
-      <input type="radio" name="" id="">
+        <label class="plan" for="radio1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>          
+          <input hidden type="radio" name="radio" id="radio1" />
+          <p>
+            <p class="mar-b-clr">Arcade</p>
+            <p>$9/mo</p>
+          </p>
+          
 
-    Monthly
-    Yearly
+          <!-- <p><span>2 months free</span></p> -->
+        </label>
 
-  </form>
+        <label class="plan" for="radio2" fa-solid>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#483EFF"/><path fill="#FFF" fill-rule="nonzero" d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z"/></g></svg>          
+          <input hidden type="radio" name="radio" id="radio2" />
+          <p>
+            <p class="mar-b-clr">Advanced</p>            
+            <p>$12/mo</p>
+          </p>
+          <!-- <p><span>2 months free</span></p> -->
 
-  <button>Go Back</button>
-  <button type="submit">Next Step</button>
+        </label>
 
-  <!-- Step 2 end -->
+        <label class="plan" for="radio3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#F9818E"/><path fill="#FFF" fill-rule="nonzero" d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z"/></g></svg>          
+          <input hidden type="radio" name="radio" id="radio3" />
+          <p>
+            <p class="mar-b-clr">Pro</p>
+            <p>$15/mo</p>
+          </p>
+          <!-- <p><span>2 months free</span></p> -->
+          
+        </label>
+        
 
-  <!-- Step 3 start -->
+        <label>
+          Monthly
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+          Yearly
+        </label>
 
-  <form action="Submit" method="post">
-    <h1>Pick add-ons</h1>
-    <p>Add-ons help enhance your gaming experience.
-    </p>
+        <button id="back-2">Go Back</button>
+        <button type="submit" id="next-2">Next Step</button>
+      </form>
+    </section>
 
-    <label for="">Online service
-      Access to multiplayer games
-      +$1/mo</label>
-    <input type="checkbox" name="" id="">
-    
-    <label for="">Larger storage
-      Extra 1TB of cloud save
-      +$2/mo</label>
-    <input type="checkbox" name="" id="">
+    <!-- Step 2 end -->
 
-    <label for="">Customizable Profile
-      Custom theme on your profile
-      +$2/mo</label>
-      <input type="checkbox" name="" id="">
+    <!-- Step 3 start -->
+    <section>
+      <form
+        action="Submit"
+        method="post"
+        class="info-form, hidden"
+        id="add-ons"
+      >
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
 
-    <button>Go Back</button>
-    <button>Next Step</button>
-  </form>
+        <label for="">
+          Online service Access to multiplayer games +$1/mo
+          <input type="checkbox" name="" id="" />
+        </label>
 
-  <!-- Step 3 end -->
+        <label for="">
+          Larger storage Extra 1TB of cloud save +$2/mo
+          <input type="checkbox" name="" id="" />
+        </label>
 
-  <!-- Step 4 start -->
+        <label for="">
+          Customizable Profile Custom theme on your profile +$2/mo
+          <input type="checkbox" name="" id="" />
+        </label>
+        <button id="back-3">Go Back</button>
+        <button id="next-3">Next Step</button>
+      </form>
+    </section>
 
-  <form action="" method="post">
-    Finishing up
-  Double-check everything looks OK before confirming.
+    <!-- Step 3 end -->
 
-  <!-- Dynamically add subscription and add-on selections here -->
+    <!-- Step 4 start -->
+    <section>
+      <form action="" method="post" class="info-form, hidden" id="summary">
+        Finishing up Double-check everything looks OK before confirming.
 
-  Total (per month/year)
+        <!-- Dynamically add subscription and add-on selections here -->
 
-  </form>
+        Total (per month/year)
 
- <button> Go Back</button>
- <button>Confirm</button>
+        <button id="back-4">Go Back</button>
+        <button id="confirm">Confirm</button>
+      </form>
+    </section>
 
-  <!-- Step 4 end -->
+    <!-- Step 4 end -->
 
-  <!-- Step 5 start -->
+    <!-- Step 5 start -->
+    <section>
+      <form action="" class="info-form, hidden" id="thank-you">
+        <i class="fa-solid fa-check"></i>
+        <h1>Thank you!</h1>
 
-  <form action="">
-    <i class="fa-solid fa-check"></i>
-    <h1>Thank you!</h1>
+        Thanks for confirming your subscription! We hope you have fun using our
+        platform. If you ever need support, please feel free to email us at
+        support@loremgaming.com.
+      </form>
+    </section>
 
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
-  </form>
+    <!-- Step 5 end -->
 
-  <!-- Step 5 end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>

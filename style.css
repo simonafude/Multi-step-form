@@ -1,35 +1,222 @@
 /* Color Variables Declaration */
-
+* {
+  border: 1px solid black;
+}
 :root {
   /* Primary */
-  --mar-b-clr: hsl(213, 96%, 18%);
-  --purp-b-clr: hsl(243, 100%, 62%);
-  --past-b-clr: hsl(228, 100%, 84%);
-  --light-b-clr: hsl(206, 94%, 87%);
-  --straw-red-clr: hsl(354, 84%, 57%);
+  --clr-mar-b: hsl(213, 96%, 18%);
+  --clr-purp-b: hsl(243, 100%, 62%);
+  --clr-past-b: hsl(228, 100%, 84%);
+  --clr-light-b: hsl(206, 94%, 87%);
+  --clr-straw-red: hsl(354, 84%, 57%);
 
   /* Neutral */
-  --cool-g-clr: hsl(231, 11%, 63%);
-  --light-g-color: hsl(229, 24%, 87%);
-  --magno-clr: hsl(217, 100%, 97%);
-  --alabas-clr: hsl(231, 100%, 99%);
-  --white: hsl(0, 0%, 100%);
+  --clr-cool-g: hsl(231, 11%, 63%);
+  --clr-light-g: hsl(229, 24%, 87%);
+  --clr-magno: hsl(217, 100%, 97%);
+  --clr-alabas: hsl(231, 100%, 99%);
+  --clr-white: hsl(0, 0%, 100%);
 
 }
 
 body {
+  box-sizing: border-box;
   font-size: 16px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", serif;
+  margin: 0;
+  background-color: var(--clr-light-g);
+  overflow-y: hidden;
+  width: 100%;
 }
 
-
-
-
-
-
-.attribution { 
-  font-size: 11px; text-align: center; 
+.sidebar {
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(assets/images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: -1;
 }
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
+
+.sidebar > button {
+  border-radius: 50%;
+  background-color: var(--clr-purp-b);
+  border: 1px solid var(--clr-white);
+  height: 30px;
+  width: 30px;
+  color: var(--clr-white);
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+section {
+  position: fixed;
+  top: 150px;
+  width: 100%;
+
+}
+
+.info-form {
+  position: relative;
+  top: -50px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: var(--clr-white);
+
+  h1 {
+    color: var(--clr-mar-b);
+  }
+
+  p {
+    color: var(--clr-cool-g);
+
+  }
+
+  input[type="text"] {
+    display: block;
+    padding: 0.5rem 1em;
+    border: 1px solid var(--clr-cool-g);
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
+
+.plan {
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[type="radio"] {
+  /* height: 0;
+  width: 0; */
+}
+
+.plan > p {
+  padding-left: 5px;
+  
+
+}
+
+.mar-b-clr {
+  color: var(--clr-mar-b);
+}
+
+.plan:has(input:checked) {
+  border: 1px solid var(--clr-cool-g);
+}
+
+label {
+  color: var(--clr-mar-b);
+}
+
+#back-2,
+#back-3,
+#back-4 {
+  position: fixed;
+  left: 20px;
+  bottom: 30px;
+  color: var(--clr-cool-g);
+
+}
+
+/* styling for Next step buttons at the right  */
+#next-1,
+#next-2,
+#next-3,
+#confirm {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  color: var(--clr-white);
+  background-color: var(--clr-mar-b);
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Toggle button */
+.switch {
+  position: relative;
+  margin: 0 auto;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
