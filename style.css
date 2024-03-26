@@ -1,7 +1,8 @@
 /* Color Variables Declaration */
-* {
+/* * {
   border: 1px solid black;
-}
+} */
+
 :root {
   /* Primary */
   --clr-mar-b: hsl(213, 96%, 18%);
@@ -27,18 +28,17 @@ body {
   background-color: var(--clr-light-g);
   overflow-y: hidden;
   width: 100%;
+  height: 100vh;
 }
 
 .sidebar {
-  width: 100%;
   height: 150px;
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
   background-image: url(assets/images/bg-sidebar-mobile.svg);
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   z-index: -1;
@@ -59,9 +59,8 @@ body {
 }
 
 section {
-  position: fixed;
-  top: 150px;
-  width: 100%;
+  /* position: fixed; */
+  /* top: 150px; */
 
 }
 
@@ -70,7 +69,7 @@ section {
   top: -50px;
   width: 80%;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5rem;
   border-radius: 10px;
   background-color: var(--clr-white);
 
@@ -81,22 +80,58 @@ section {
   p {
     color: var(--clr-cool-g);
 
+  } 
+
+  label {
+    color: var(--clr-mar-b);
+    font-weight: 600;
   }
 
-  input[type="text"] {
+}
+
+#personal-info  {
+  input[type="text"], input[type="tel"], input[type="email"] {
     display: block;
     padding: 0.5rem 1em;
     border: 1px solid var(--clr-cool-g);
+    margin-top: 0.5rem;
     margin-bottom: 20px;
     border-radius: 5px;
   }
+
+
+}
+
+#plan {
+  
+
+  label {
+    color: var(--clr-mar-b);
+    margin: 10px;
+    border-radius: 5px;
+    /* border: 1px solid var(--clr-cool-g); */
+
+  }
+
 }
 
 .plan {
   display: flex;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  width: 100%;
+  padding: 0.5rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      margin-bottom: 0.5rem;
+    } 
+
+  }
 }
 
 input[type="radio"] {
@@ -104,23 +139,70 @@ input[type="radio"] {
   width: 0; */
 }
 
-.plan > p {
-  padding-left: 5px;
+.plan:has(input:checked) {
+  border: 1px solid var(--clr-purp-b);
+}
+
+.duration-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#add-ons {
+  label {
+    display: flex;
+  }
+
+  
+}
+
+input[type="checkbox"] + label {
+  border: 2px solid black;
+}
+
+input[type="checkbox"]:hover + label {
+  background-color: blueviolet;
+  border: 2px solid var(--clr-purp-b);
+}
+
+input[type="checkbox"]:checked + label {
+  border: 2px solid var(--clr-purp-b);
+}
+
+.add-ons {
+
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid var(--clr-cool-g);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+
+  input {
+    margin-right: 0.5rem;
+  }
+
   
 
+  div {
+    display: flex;
+    flex-direction: column;
+
+    span {
+
+    } 
+  }
+
+  span {
+    margin-right: 1.5rem;
+  }
+
+
 }
 
-.mar-b-clr {
-  color: var(--clr-mar-b);
-}
 
-.plan:has(input:checked) {
-  border: 1px solid var(--clr-cool-g);
-}
-
-label {
-  color: var(--clr-mar-b);
-}
 
 #back-2,
 #back-3,
@@ -142,9 +224,15 @@ label {
   bottom: 30px;
   color: var(--clr-white);
   background-color: var(--clr-mar-b);
-  padding: 0.5em;
+  padding: 1em;
   border-radius: 5px;
   border: none;
+}
+
+.duration-btn {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* Toggle button */
@@ -152,8 +240,8 @@ label {
   position: relative;
   margin: 0 auto;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 37px;
+  height: 21px;
 }
 
 .switch input {
@@ -169,7 +257,7 @@ label {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--clr-mar-b);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -177,17 +265,17 @@ label {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked+.slider {
-  background-color: #2196F3;
+  background-color: var(--clr-mar-b);
 }
 
 input:focus+.slider {
@@ -195,9 +283,9 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
 }
 
 /* Rounded sliders */
